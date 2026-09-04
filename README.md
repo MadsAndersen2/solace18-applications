@@ -15,3 +15,16 @@ Denne version er lavet til:
 
 ## Vigtigt
 Discord-roller læses ved login. Hvis en rolle ændres, skal brugeren logge ud og ind igen for at få nye permissions.
+
+
+## Discord webhook til Whitelist-status
+Opret en webhook i den Discord-kanal, hvor beskederne skal sendes, og tilføj denne Vercel environment variable:
+
+`DISCORD_WHITELIST_WEBHOOK_URL`
+
+Beskederne er:
+- `<@user> Vi har modtaget din ansøgning`
+- `<@user> Din Whitelist ansøgning er Godkendt`
+- `<@user> Din Whitelist Ansøgning er Afvist.`
+
+Webhook-fejl stopper ikke selve ansøgningen fra at blive gemt i databasen.
