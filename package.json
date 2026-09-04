@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "engines": { "node": "20.x" },
+  "engines": {
+    "node": "24.x"
+  },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",
     "jose": "^5.9.6"

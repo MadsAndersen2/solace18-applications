@@ -28,3 +28,30 @@ Beskederne er:
 - `<@user> Din Whitelist Ansøgning er Afvist.`
 
 Webhook-fejl stopper ikke selve ansøgningen fra at blive gemt i databasen.
+
+
+## Webhook v2
+
+Denne version bruger kun Discord Webhook og har:
+- 3 forsøg ved midlertidige fejl
+- tydelige Runtime Logs i Vercel
+- admin-only test-endpoint
+
+Vercel Environment Variable:
+`DISCORD_WHITELIST_WEBHOOK_URL`
+
+Test:
+1. Log ind på hjemmesiden med Projekt Lead/Admin.
+2. Åbn:
+   `/api/webhook-test`
+3. Ved succes vises:
+   `{"ok":true,"message":"Webhook sendt.","status":204}`
+4. Discord-kanalen modtager:
+   `@User Solace webhook-test virker ✅`
+
+Hvis testen fejler, viser endpointet selve fejlen, fx 401/404/429.
+
+Whitelist-beskeder:
+- `@User Vi har modtaget din ansøgning`
+- `@User Din Whitelist ansøgning er Godkendt`
+- `@User Din Whitelist Ansøgning er Afvist.`

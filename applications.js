@@ -41,7 +41,10 @@ export default async function handler(req, res) {
     `;
 
     if (type === "whitelist") {
-      await sendWhitelistWebhook(session.id, "Vi har modtaget din ansøgning");
+      const webhookResult = await sendWhitelistWebhook(session.id, "Vi har modtaget din ansøgning");
+      if (!webhookResult.ok) {
+        console.error("Whitelist modtagelsesbesked blev ikke sendt:", webhookResult.error);
+      }
     }
 
     return res.status(201).json(inserted[0]);

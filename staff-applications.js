@@ -49,9 +49,11 @@ export default async function handler(req, res) {
     `;
     if (type === "whitelist" && previousStatus !== status) {
       if (status === "approved") {
-        await sendWhitelistWebhook(applicantDiscordId, "Din Whitelist ansøgning er Godkendt");
+        const webhookResult = await sendWhitelistWebhook(applicantDiscordId, "Din Whitelist ansøgning er Godkendt");
+        if (!webhookResult.ok) console.error("Godkendt-besked blev ikke sendt:", webhookResult.error);
       } else if (status === "rejected") {
-        await sendWhitelistWebhook(applicantDiscordId, "Din Whitelist Ansøgning er Afvist.");
+        const webhookResult = await sendWhitelistWebhook(applicantDiscordId, "Din Whitelist Ansøgning er Afvist.");
+        if (!webhookResult.ok) console.error("Afvist-besked blev ikke sendt:", webhookResult.error);
       }
     }
 
