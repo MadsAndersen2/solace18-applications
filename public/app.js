@@ -38,7 +38,34 @@ const types = {
       ["experience","Relevant RP-erfaring","textarea"],
       ["plan","Hvad vil du bidrage med til byen?","textarea"]
     ]
-  }
+  },
+  },
+  police: {
+    title: "Politi",
+    description: "For dig der ønsker at blive en del af politiet på Solace 18+.",
+    fields: [
+      ["name","Hvad hedder du?","text"],
+      ["age","Hvor gammel er du?","number"],
+      ["experience","Beskriv din tidligere RP-erfaring","textarea"],
+      ["policeExperience","Har du tidligere erfaring med politi-RP?","textarea"],
+      ["motivation","Hvorfor vil du være betjent på Solace 18+?","textarea"],
+      ["strengths","Hvilke styrker vil du bidrage med til politiet?","textarea"],
+      ["availability","Hvor aktiv forventer du at være?","text"]
+    ]
+  },
+  ems: {
+    title: "Læge",
+    description: "For dig der ønsker at blive en del af sundhedsberedskabet på Solace 18+.",
+    fields: [
+      ["name","Hvad hedder du?","text"],
+      ["age","Hvor gammel er du?","number"],
+      ["experience","Beskriv din tidligere RP-erfaring","textarea"],
+      ["emsExperience","Har du tidligere erfaring med læge/EMS-RP?","textarea"],
+      ["motivation","Hvorfor vil du være læge på Solace 18+?","textarea"],
+      ["patientRp","Hvordan vil du skabe godt RP med patienter?","textarea"],
+      ["availability","Hvor aktiv forventer du at være?","text"]
+    ]
+
 };
 
 let me = { loggedIn:false, permissions:{} };
@@ -59,7 +86,7 @@ async function init(){
     qs("#mine").classList.remove("hidden");
     loadMine();
     const perms = me.permissions || {};
-    if(perms.admin || perms.whitelist || perms.staff || perms.creator || perms.company) {
+    if(perms.admin || perms.whitelist || perms.staff || perms.creator || perms.company || perms.police || perms.ems) {
       qs("#staff").classList.remove("hidden");
       qs("#staffNav").classList.remove("hidden");
       renderStaffTabs();
