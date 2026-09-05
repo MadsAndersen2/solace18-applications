@@ -1,13 +1,13 @@
 const types = {
   whitelist: {
     title: "Whitelist",
-    description: "For dig der gerne vil være en del af Solace 18+.",
+    description: "For dig der gerne vil være en del af Solace 16+.",
     fields: [
       ["name","Hvad hedder du?","text"],
       ["age","Hvor gammel er du?","number"],
       ["experience","Beskriv din tidligere RP-erfaring","textarea"],
       ["character","Fortæl om din karakter","textarea"],
-      ["motivation","Hvorfor vil du spille på Solace 18+?","textarea"]
+      ["motivation","Hvorfor vil du spille på Solace 16+?","textarea"]
     ]
   },
   staff: {
@@ -50,7 +50,7 @@ const types = {
       ["age","Hvor gammel er du?","number"],
       ["experience","Beskriv din tidligere RP-erfaring","textarea"],
       ["policeExperience","Har du tidligere erfaring med politi-RP?","textarea"],
-      ["motivation","Hvorfor vil du være betjent på Solace 18+?","textarea"],
+      ["motivation","Hvorfor vil du være betjent på Solace 16+?","textarea"],
       ["strengths","Hvilke styrker vil du bidrage med til politiet?","textarea"],
       ["availability","Hvor aktiv forventer du at være?","text"]
     ]
