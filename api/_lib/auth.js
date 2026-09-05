@@ -44,7 +44,9 @@ export function permissionsFor(roles = []) {
     whitelist: admin || has(process.env.ROLE_WHITELIST_RECEIVER_ID),
     staff: admin || has(process.env.ROLE_STAFF_RESPONSIBLE_ID),
     creator: admin || has(process.env.ROLE_CREATOR_RESPONSIBLE_ID),
-    company: admin || has(process.env.ROLE_COMPANY_RESPONSIBLE_ID)
+    company: admin || has(process.env.ROLE_COMPANY_RESPONSIBLE_ID),
+    police: admin || has(process.env.ROLE_POLICE_RESPONSIBLE_ID),
+    ems: admin || has(process.env.ROLE_EMS_RESPONSIBLE_ID)
   };
 }
 
