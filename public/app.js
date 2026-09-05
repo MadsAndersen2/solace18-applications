@@ -28,7 +28,7 @@ const types = {
       ["name","Navn / creator-navn","text"],
       ["platform","Platform og kanal-link","text"],
       ["audience","Fortæl kort om dit publikum","textarea"],
-      ["motivation","Hvorfor vil du samarbejde med Solace 18+?","textarea"]
+      ["motivation","Hvorfor vil du samarbejde med Solace 16+?","textarea"]
     ]
   },
   company: {
@@ -44,7 +44,7 @@ const types = {
   },
   police: {
     title: "Politi",
-    description: "For dig der ønsker at blive en del af politiet på Solace 18+.",
+    description: "For dig der ønsker at blive en del af politiet på Solace 16+.",
     fields: [
       ["name","Hvad hedder du?","text"],
       ["age","Hvor gammel er du?","number"],
@@ -57,13 +57,13 @@ const types = {
   },
   ems: {
     title: "Læge",
-    description: "For dig der ønsker at blive en del af sundhedsberedskabet på Solace 18+.",
+    description: "For dig der ønsker at blive en del af sundhedsberedskabet på Solace 16+.",
     fields: [
       ["name","Hvad hedder du?","text"],
       ["age","Hvor gammel er du?","number"],
       ["experience","Beskriv din tidligere RP-erfaring","textarea"],
       ["emsExperience","Har du tidligere erfaring med læge/EMS-RP?","textarea"],
-      ["motivation","Hvorfor vil du være læge på Solace 18+?","textarea"],
+      ["motivation","Hvorfor vil du være læge på Solace 16+?","textarea"],
       ["patientRp","Hvordan vil du skabe godt RP med patienter?","textarea"],
       ["availability","Hvor aktiv forventer du at være?","text"]
     ]
